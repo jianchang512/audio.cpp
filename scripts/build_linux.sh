@@ -337,10 +337,10 @@ if [[ "$ENGINE_ENABLE_HIP" == "ON" && "$DEPLOYMENT_BUILD_SET" == "OFF" ]]; then
     AUDIOCPP_DEPLOYMENT_BUILD="ON"
 fi
 
-if [[ "$ENGINE_ENABLE_CUDA" == "ON" && "$ENGINE_ENABLE_VULKAN" == "ON" ]]; then
+#if [[ "$ENGINE_ENABLE_CUDA" == "ON" && "$ENGINE_ENABLE_VULKAN" == "ON" ]]; then
     #echo "CUDA and Vulkan backends cannot both be enabled by this script" >&2
     #exit 1
-fi
+#fi
 
 ENABLED_GPU_BACKENDS=0
 [[ "$ENGINE_ENABLE_CUDA" == "ON" ]] && ENABLED_GPU_BACKENDS=$((ENABLED_GPU_BACKENDS + 1))
