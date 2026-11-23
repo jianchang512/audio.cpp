@@ -53,7 +53,7 @@ while [[ $# -gt 0 ]]; do
                 VULKAN_MODE="off"
                 HIP_MODE="off"
             elif [[ "$2" == "vulkan" ]]; then
-                CUDA_MODE="off"
+                CUDA_MODE="on"
                 VULKAN_MODE="on"
                 HIP_MODE="off"
             elif [[ "$2" == "webgpu" ]]; then
