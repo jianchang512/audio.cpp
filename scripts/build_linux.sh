@@ -338,8 +338,8 @@ if [[ "$ENGINE_ENABLE_HIP" == "ON" && "$DEPLOYMENT_BUILD_SET" == "OFF" ]]; then
 fi
 
 if [[ "$ENGINE_ENABLE_CUDA" == "ON" && "$ENGINE_ENABLE_VULKAN" == "ON" ]]; then
-    echo "CUDA and Vulkan backends cannot both be enabled by this script" >&2
-    exit 1
+    #echo "CUDA and Vulkan backends cannot both be enabled by this script" >&2
+    #exit 1
 fi
 
 ENABLED_GPU_BACKENDS=0
