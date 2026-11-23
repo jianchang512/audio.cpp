@@ -347,10 +347,10 @@ ENABLED_GPU_BACKENDS=0
 [[ "$ENGINE_ENABLE_VULKAN" == "ON" ]] && ENABLED_GPU_BACKENDS=$((ENABLED_GPU_BACKENDS + 1))
 [[ "$ENGINE_ENABLE_HIP" == "ON" ]] && ENABLED_GPU_BACKENDS=$((ENABLED_GPU_BACKENDS + 1))
 [[ "$ENGINE_ENABLE_WEBGPU" == "ON" ]] && ENABLED_GPU_BACKENDS=$((ENABLED_GPU_BACKENDS + 1))
-if [[ "$ENABLED_GPU_BACKENDS" -gt 1 ]]; then
-    echo "CUDA, Vulkan, HIP, and WebGPU backends are mutually exclusive in this script" >&2
-    exit 1
-fi
+#if [[ "$ENABLED_GPU_BACKENDS" -gt 1 ]]; then
+#    echo "CUDA, Vulkan, HIP, and WebGPU backends are mutually exclusive in this script" >&2
+#    exit 1
+#fi
 
 BACKEND_NAME="cpu"
 if [[ "$ENGINE_ENABLE_CUDA" == "ON" ]]; then
